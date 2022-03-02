@@ -1,7 +1,5 @@
 
-
 const api_key = `ecee96b536b7b7091b5bc06323a097ae`;
-
 
 const searchTemparature = () => {
 
@@ -21,8 +19,6 @@ const setInnerText = (id,text) => {
     }else {
         document.getElementById(id).innerText = 'Unknown';
     }
-
-
 }
 
 const displayTemparature = temparature => {
@@ -30,11 +26,8 @@ const displayTemparature = temparature => {
     setInnerText('city', temparature.name);
     setInnerText('temp', temparature.main.temp);
     setInnerText('condition', temparature.weather[0].main);
-
     // set icon 
-
     const url = `http://openweathermap.org/img/wn/${temparature.weather[0].icon}@2x.png`;
-
     const imgIcon = document.getElementById('weather-icon');
 
     imgIcon.setAttribute('src',url);
